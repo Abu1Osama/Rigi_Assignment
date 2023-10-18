@@ -158,8 +158,10 @@
         align-items: center;
       }
       .social i {
-        color: white;
-        font-size: 50px;
+        /* color:var(--bg2); */
+        font-size: 30px;
+        /* background: white; */
+        border-radius: 50% !important;
       }
       .contact {
         display: flex;
@@ -187,7 +189,7 @@
         font-weight: 600;
       }
       .contact-ico i {
-        font-size: 40px;
+        font-size: 30px;
         color: var(--bg2);
         background: rgb(237, 235, 235);
         padding: 8px;
@@ -251,12 +253,14 @@
         display: grid;
         gap: 45px;
       }
-      .service-section-child {
+      .service-section-child-consultation,
+      .service-section-child-courses {
         display: flex;
         flex-direction: column;
         /* align-items: center; */
         gap: 35px;
       }
+
       .service-section-child-tab {
         display: flex;
         align-items: center;
@@ -270,6 +274,7 @@
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         background: white;
         font-weight: 400;
+        cursor: pointer;
       }
       .service-section-child-bottom {
         display: grid;
@@ -323,6 +328,7 @@
       #Community {
         background: var(--bg2);
         color: white;
+        cursor: pointer;
       }
       .list {
         display: grid;
@@ -375,6 +381,7 @@
         background: var(--bg2);
         border: none;
         margin-top: 20px;
+        cursor: pointer;
       }
       #media_section {
         display: grid;
@@ -409,14 +416,14 @@
         gap: 15px;
         justify-content: center;
       }
-      .view_main-child{
+      .view_main-child {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 15px;
       }
-      
+
       .view_main-child-second img {
         width: 200px;
         object-fit: contain;
@@ -429,15 +436,35 @@
         background: var(--bg2);
         border-top-right-radius: 50%;
         border-top-left-radius: 50%;
-
       }
-      .viewsection-btn{
+      .viewsection-btn,
+      .banner-btn {
         padding: 10px 50px;
-        /* width: max-content; */
+        width: max-content;
         border-radius: 9999px;
         color: var(--bg2);
         background: var(--bg3);
         border: none;
+        cursor: pointer;
+      }
+      #banner {
+        display: grid;
+        grid-template-columns: 25% 25%;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        background: var(--bg2);
+        color: white;
+      }
+      .banner-image img {
+        width: 100%;
+      }
+      .banner-child {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        /* justify-content: center; */
+        align-items: center;
       }
       @media (max-width: 768px) {
         .menu {
@@ -461,6 +488,56 @@
         .menu-icon {
           display: block;
         }
+        .contact{
+          /* display: none; */
+        }
+        .contact-bottom{
+          flex-direction: column;
+        }
+        .contact-top{
+          padding: 0 20px;
+          text-align: center;
+        }
+        .service-section-child-bottom{
+          grid-template-columns: 100%;
+          padding: 0 15px;
+        }
+        .testimonial-card {
+          grid-template-columns: 100%;
+          padding: 0 15px;
+        }
+        #media_section {
+          padding: 0 15px;
+        }
+        #banner{
+
+          grid-template-columns: 100%;
+        }
+        #services{
+          padding: 0 15px;
+        }
+        .service-section-club {
+          grid-template-columns: 100%;
+
+        }
+        .service-section-club-child-right{
+          justify-content: center;
+        }
+        .main-btn {
+          display: none;
+        }
+        #foot{
+          flex-wrap: wrap;
+        }
+        .view_main-child-second img {
+          width: 120px;
+        }
+        #about-me {
+          width: 100%;
+        }
+        .about-content {
+          padding: 0 15px;
+        }
       }
     </style>
   </head>
@@ -475,6 +552,20 @@
         <li><a href="#">Contact us</a></li>
       </ul>
     </nav>
+
+    <div id="banner">
+      <div class="banner-child">
+        <h1>Hack your wealth journey inside the 1% club</h1>
+        <p>
+          A super premium annual subscription that will transform your wealth
+          planning and make you say “Bro! I’m financially sorted!”
+        </p>
+        <button class="banner-btn">Join the community</button>
+      </div>
+      <div class="banner-image">
+        <img src="./assets/banner.webp" alt="" />
+      </div>
+    </div>
 
     <div id="featured">
       <div class="featured-top">
@@ -532,48 +623,42 @@
         <div class="service-section-child">
           <div class="service-section-child-tab">
             <button id="Community">Community</button>
-            <button>Courses</button><button>Consultation</button>
-          </div>
-          <div class="service-section-club">
-            <div class="service-section-club-child-left">
-              <h1>The 1% Club</h1>
-              <p>
-                Now, I'm on a mission to help you get to the RICHEST 1% - one
-                educational finance content at a time.
-              </p>
-              <div class="list">
-                <div>
-                  <i class="fa-solid fa-check"></i>
-                  <span>Exclusive 1 on 1 interaction with the creator</span>
-                </div>
-                <div>
-                  <i class="fa-solid fa-check"></i>
-                  <span>
-                    Connect with like minded folks, from diverse backgrounds &
-                    cities
-                  </span>
-                </div>
-                <div>
-                  <i class="fa-solid fa-check"></i>
-                  <span
-                    >32+ Hours of Investing Tutorials, Tools & Community</span
-                  >
-                </div>
-              </div>
-              <div>
-                <button class="main-btn">Join the community</button>
-              </div>
-            </div>
-            <div class="service-section-club-child-right">
-              <img src="./assets/main.png" alt="" />
-            </div>
+            <button id="Courses">Courses</button><button id="Consultation">Consultation</button>
           </div>
         </div>
-        <div class="service-section-child">
-          <div class="service-section-child-tab">
-            <button>Community</button>
-            <button id="Courses">Courses</button><button>Consultation</button>
+        <div class="service-section-club">
+          <div class="service-section-club-child-left">
+            <h1>The 1% Club</h1>
+            <p>
+              Now, I'm on a mission to help you get to the RICHEST 1% - one
+              educational finance content at a time.
+            </p>
+            <div class="list">
+              <div>
+                <i class="fa-solid fa-check"></i>
+                <span>Exclusive 1 on 1 interaction with the creator</span>
+              </div>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                <span>
+                  Connect with like minded folks, from diverse backgrounds &
+                  cities
+                </span>
+              </div>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                <span>32+ Hours of Investing Tutorials, Tools & Community</span>
+              </div>
+            </div>
+            <div>
+              <button class="main-btn">Join the community</button>
+            </div>
           </div>
+          <div class="service-section-club-child-right">
+            <img src="./assets/main.png" alt="" />
+          </div>
+        </div>
+        <div class="service-section-child-courses">
           <div class="service-section-child-bottom">
             <div class="service-section-child-bottom-main">
               <div class="service-section-img-box">
@@ -616,12 +701,7 @@
             </div>
           </div>
         </div>
-        <div class="service-section-child">
-          <div class="service-section-child-tab">
-            <button>Community</button>
-            <button>Courses</button
-            ><button id="Consultation">Consultation</button>
-          </div>
+        <div class="service-section-child-consultation">
           <div class="service-section-child-bottom">
             <div class="service-section-child-bottom-main">
               <div class="service-section-img-box">
@@ -833,7 +913,6 @@
       </div>
     </div>
 
-
     <div id="footer">
       <div class="footer-logo">
         <h1>Logo</h1>
@@ -842,7 +921,7 @@
         <i class="fa-brands fa-instagram"></i>
         <i class="fa-brands fa-facebook"></i>
         <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-square-twitter"></i>
         <i class="fa-brands fa-square-youtube"></i>
       </div>
       <div class="store">
