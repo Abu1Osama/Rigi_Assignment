@@ -13,6 +13,41 @@
         margin: 0;
         padding: 0;
       }
+
+      .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.logo {
+    color: blue;
+    font-weight: bold;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color:black;
+}
       #about-me {
         width: 60%;
         margin: auto;
@@ -337,9 +372,47 @@
         border: none;
         margin-top: 20px;
       }
+     
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        z-index: 1;
+        width: 200px;
+        padding: 10px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .menu.active {
+        transform: translateX(0);
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
     </style>
   </head>
   <body>
+    <nav class="navbar">
+      <div class="logo">
+        Logo
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <ul class="menu">
+          <li><a href="#">Join community</a></li>
+          <li><a href="#">Contact us</a></li>
+      </ul>
+  </nav>
+
     <div id="featured">
       <div class="featured-top">
         <div>
@@ -677,11 +750,11 @@
         <h1>Logo</h1>
       </div>
       <div class="social">
-        <i class="fa-brands fa-instagram fa-2xl"></i>
-        <i class="fa-brands fa-facebook fa-2xl"></i>
-        <i class="fa-brands fa-linkedin fa-2xl"></i>
-        <i class="fa-brands fa-whatsapp fa-2xl"></i>
-        <i class="fa-brands fa-square-youtube fa-2xl"></i>
+        <i class="fa-brands fa-instagram "></i>
+        <i class="fa-brands fa-facebook "></i>
+        <i class="fa-brands fa-linkedin "></i>
+        <i class="fa-brands fa-whatsapp "></i>
+        <i class="fa-brands fa-square-youtube "></i>
       </div>
       <div class="store">
         <img width="150px" src="./assets/appstore.png" alt="" />
@@ -694,3 +767,4 @@
     </div>
   </body>
 </html>
+
