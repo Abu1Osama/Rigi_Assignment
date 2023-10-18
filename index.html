@@ -13,41 +13,45 @@
         margin: 0;
         padding: 0;
       }
-
+      :root {
+        --bg1: #5c7ff6;
+        --bg2: #335ff4;
+        --bg3: #ebeffe;
+      }
       .navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 20px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
 
-.logo {
-    color: blue;
-    font-weight: bold;
-}
+      .logo {
+        color: var(--bg1);
+        font-weight: bold;
+      }
 
-.menu-icon {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-}
+      .menu-icon {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+      }
 
-.menu {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
+      .menu {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
 
-.menu li {
-    margin-right: 20px;
-}
+      .menu li {
+        margin-right: 20px;
+      }
 
-.menu a {
-    text-decoration: none;
-    color:black;
-}
+      .menu a {
+        text-decoration: none;
+        color: black;
+      }
       #about-me {
         width: 60%;
         margin: auto;
@@ -82,7 +86,7 @@
       .ico i {
         color: white;
         padding: 7px;
-        background: blue;
+        background: var(--bg2);
         border-radius: 50%;
         font-size: 25px;
       }
@@ -96,26 +100,26 @@
         gap: 20px;
         font-size: 35px;
         justify-content: center;
-        color: blue;
+        color: var(--bg2);
       }
       .featured-font span:nth-child(2) {
-        color: blue;
+        color: var(--bg2);
         font-family: "Times New Roman", Times, serif;
       }
       .featured-font span:nth-child(4) {
-        color: blue;
+        color: var(--bg2);
         font-family: "Times New Roman", Times, serif;
       }
       .featured-font span:nth-child(3) {
-        color: blue;
+        color: var(--bg2);
         font-weight: bolder;
       }
       .featured-font span:nth-child(5) {
-        color: blue;
+        color: var(--bg2);
         font-weight: bolder;
       }
       .featured-font span:nth-child(1) {
-        color: blue;
+        color: var(--bg2);
         font-weight: bolder;
       }
 
@@ -126,7 +130,7 @@
       }
 
       #footer {
-        background: blue;
+        background: var(--bg2);
         color: white;
         display: flex;
         flex-direction: column;
@@ -184,7 +188,7 @@
       }
       .contact-ico i {
         font-size: 40px;
-        color: blue;
+        color: var(--bg2);
         background: rgb(237, 235, 235);
         padding: 8px;
         border-radius: 50%;
@@ -285,7 +289,7 @@
         width: 100%;
         border-radius: 9999px;
         color: white;
-        background: blue;
+        background: var(--bg2);
         border: none;
       }
       .service-section-img-box {
@@ -317,7 +321,7 @@
       #Consultation,
       #Courses,
       #Community {
-        background: blue;
+        background: var(--bg2);
         color: white;
       }
       .list {
@@ -368,50 +372,109 @@
         width: 50%;
         border-radius: 9999px;
         color: white;
-        background: blue;
+        background: var(--bg2);
         border: none;
         margin-top: 20px;
       }
-     
-
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
+      #media_section {
+        display: grid;
+        gap: 35px;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .media_section_main {
+        position: relative;
+      }
+      .media_section_main i {
         position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #333;
-        z-index: 1;
+        top: 50%;
+        left: 50%;
+        color: white;
+        font-size: 50px;
+        transform: translate(-50%, -50%);
+        margin: 0;
+      }
+      .media_section-img {
+        width: 100%;
+        border-radius: 16px;
+      }
+      #viewsection {
+        text-align: center;
+        color: white;
+        margin-bottom: 50px;
+      }
+      .view_main-child-second {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+      }
+      .view_main-child{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      }
+      
+      .view_main-child-second img {
         width: 200px;
-        padding: 10px;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
+        object-fit: contain;
+      }
+      .view_main {
+        display: grid;
+        gap: 20px;
+        padding: 50px;
+        justify-content: center;
+        background: var(--bg2);
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
 
-    .menu.active {
-        transform: translateX(0);
-    }
+      }
+      .viewsection-btn{
+        padding: 10px 50px;
+        /* width: max-content; */
+        border-radius: 9999px;
+        color: var(--bg2);
+        background: var(--bg3);
+        border: none;
+      }
+      @media (max-width: 768px) {
+        .menu {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          background-color: #333;
+          z-index: 1;
+          width: 200px;
+          padding: 10px;
+          transform: translateX(100%);
+          transition: transform 0.3s ease-in;
+        }
 
-    .menu-icon {
-        display: block;
-    }
-}
+        .menu.active {
+          transform: translateX(0);
+        }
+
+        .menu-icon {
+          display: block;
+        }
+      }
     </style>
   </head>
   <body>
     <nav class="navbar">
-      <div class="logo">
-        Logo
-      </div>
+      <div class="logo">Logo</div>
       <div class="menu-icon" onclick="toggleMenu()">
         <i class="fa-solid fa-bars"></i>
       </div>
       <ul class="menu">
-          <li><a href="#">Join community</a></li>
-          <li><a href="#">Contact us</a></li>
+        <li><a href="#">Join community</a></li>
+        <li><a href="#">Contact us</a></li>
       </ul>
-  </nav>
+    </nav>
 
     <div id="featured">
       <div class="featured-top">
@@ -709,6 +772,31 @@
       </div>
     </div>
 
+    <div id="media_section">
+      <div class="media_section_top">
+        <span>Media section</span>
+        <h1>Check out the intro video of the community</h1>
+      </div>
+
+      <div class="media_section_main">
+        <img class="media_section-img" src="./assets//videobg.jpg" alt="" />
+        <i class="fa-solid fa-circle-play"></i>
+      </div>
+    </div>
+
+    <div id="viewsection">
+      <div class="view_main">
+        <div class="view_main-child">
+          <p>Get the app in one click!</p>
+          <h1>Hack your wealth journey inside the 1% club</h1>
+          <button class="viewsection-btn">Join the community</button>
+        </div>
+        <div class="view_main-child-second">
+          <img src="./assets/desk1.png" alt="" />
+          <img src="./assets/desk2.png" alt="" />
+        </div>
+      </div>
+    </div>
     <div class="contact">
       <div class="contact-top">
         <span>Contact us</span>
@@ -745,16 +833,17 @@
       </div>
     </div>
 
+
     <div id="footer">
-      <div class="logo">
+      <div class="footer-logo">
         <h1>Logo</h1>
       </div>
       <div class="social">
-        <i class="fa-brands fa-instagram "></i>
-        <i class="fa-brands fa-facebook "></i>
-        <i class="fa-brands fa-linkedin "></i>
-        <i class="fa-brands fa-whatsapp "></i>
-        <i class="fa-brands fa-square-youtube "></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-square-youtube"></i>
       </div>
       <div class="store">
         <img width="150px" src="./assets/appstore.png" alt="" />
@@ -767,4 +856,3 @@
     </div>
   </body>
 </html>
-
