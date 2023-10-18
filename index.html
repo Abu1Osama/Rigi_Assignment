@@ -13,6 +13,83 @@
         margin: 0;
         padding: 0;
       }
+      #about-me {
+        width: 60%;
+        margin: auto;
+        display: grid;
+        gap: 30px;
+        margin-bottom: 50px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .about-me-image-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+      .about-me-image-box img {
+        border-radius: 50%;
+        width: 40%;
+        border: 10px solid rgb(111, 111, 255);
+      }
+      .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .ico {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+      .ico i {
+        color: white;
+        padding: 7px;
+        background: blue;
+        border-radius: 50%;
+        font-size: 25px;
+      }
+      #featured {
+        width: 60%;
+        margin: 50px auto;
+      }
+      .featured-font {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 35px;
+        justify-content: center;
+        color: blue;
+      }
+      .featured-font span:nth-child(2) {
+        color: blue;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .featured-font span:nth-child(4) {
+        color: blue;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .featured-font span:nth-child(3) {
+        color: blue;
+        font-weight: bolder;
+      }
+      .featured-font span:nth-child(5) {
+        color: blue;
+        font-weight: bolder;
+      }
+      .featured-font span:nth-child(1) {
+        color: blue;
+        font-weight: bolder;
+      }
+
+      .featured-top {
+        display: grid;
+        gap: 10px;
+        text-align: center;
+      }
+
       #footer {
         background: blue;
         color: white;
@@ -105,15 +182,13 @@
         gap: 15px;
         justify-content: center;
         text-align: center;
-
-    
       }
       .testimonial-top {
         text-align: center;
       }
       .textimonial-card-child {
         padding: 15px 10px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         border-radius: 16px;
         display: grid;
         gap: 15px;
@@ -123,9 +198,372 @@
         width: 60px;
         border-radius: 50%;
       }
+      #services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+        gap: 35px;
+      }
+      .services-top {
+        text-align: center;
+      }
+      .service-section {
+        display: grid;
+        gap: 45px;
+      }
+      .service-section-child {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 35px;
+      }
+      .service-section-child-tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+      .service-section-child-tab button {
+        padding: 5px 20px;
+        border-radius: 9999px;
+        border: 1px solid rgb(224, 224, 224);
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        background: white;
+        font-weight: 400;
+      }
+      .service-section-child-bottom {
+        display: grid;
+        grid-template-columns: 20% 20% 20%;
+        justify-content: center;
+        gap: 15px;
+      }
+      .service-section-child-bottom-main {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding: 10px;
+        border-radius: 16px;
+        display: grid;
+        gap: 15px;
+      }
+      .service-section-child-bottom-main button {
+        padding: 10px 20px;
+        width: 100%;
+        border-radius: 9999px;
+        color: white;
+        background: blue;
+        border: none;
+      }
+      .service-section-img-box {
+      }
+      .service-section-img-box img {
+        width: 100%;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        padding: 5px;
+      }
+      .service-section-img-box i {
+        padding: 10px;
+        background: rgb(237, 237, 237);
+        border-radius: 50%;
+        font-size: 15px;
+        object-fit: contain;
+      }
+      .slot {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+      }
+      .gmeet {
+        width: 20px !important;
+        padding: 10px !important;
+        background: rgb(237, 237, 237);
+        border-radius: 50% !important;
+      }
+      #Consultation,
+      #Courses,
+      #Community {
+        background: blue;
+        color: white;
+      }
+      .list {
+        display: grid;
+        gap: 10px;
+      }
+      .list > div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .list i {
+        background: black;
+        color: white;
+        padding: 5px;
+        border-radius: 50%;
+      }
+      .service-section-club {
+        display: grid;
+        grid-template-columns: 28% 28%;
+        gap: 15px;
+        justify-content: center;
+      }
+      .service-section-club-child-left {
+        display: grid;
+        gap: 15px;
+      }
+      .service-section-club-child-right {
+        /* background:#0575E6; */
+        border-radius: 16px;
+        display: flex;
+        justify-content: right;
+      }
+      .service-section-club-child-right img {
+        background-image: linear-gradient(
+          to right,
+          #0839ea 0%,
+          #0575e6 51%,
+          #2f7ac4 100%
+        );
+        border-radius: 16px;
+        width: 80%;
+        height: 100%;
+      }
+
+      .main-btn {
+        padding: 10px 20px;
+        width: 50%;
+        border-radius: 9999px;
+        color: white;
+        background: blue;
+        border: none;
+        margin-top: 20px;
+      }
     </style>
   </head>
   <body>
+    <div id="featured">
+      <div class="featured-top">
+        <div>
+          <span>Featured in</span>
+        </div>
+        <div class="featured-font">
+          <span>Forbes</span>
+          <span>THE ECONOMIC TIMES</span>
+          <span>mint</span>
+          <span>THE TIMES OF INDIA</span>
+          <span>Forbes</span>
+        </div>
+      </div>
+    </div>
+    <div id="about-me">
+      <div class="about-me-top">
+        <span>About me</span>
+        <h1>Entrepreneur, content creator, Finance Influencer</h1>
+      </div>
+      <div class="about-me-image-box">
+        <img src="./assets/profile.png" alt="" />
+      </div>
+      <div class="about-content">
+        <p>
+          Hi, I'm Finance With Sharan. I’m a former management consultant at
+          KPMG and PwC where I worked with banks and NBFCs to help them make a
+          ton of money.
+        </p>
+        <p>
+          I now work as a full-time content creator and help the common man make
+          a ton of money.
+        </p>
+        I create engaging personal finance content with a blend of comedic
+        flavor and cosplay on Instagram and YouTube. I also write down highly
+        action oriented posts on LinkedIn and Twitter for those who are not on
+        social media platforms and prefer to read it instead.
+      </div>
+      <div class="ico">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-square-youtube"></i>
+      </div>
+    </div>
+
+    <div id="services">
+      <div class="services-top">
+        <span>Services</span>
+        <h1>Start your journey towards financial freedom</h1>
+      </div>
+
+      <div class="service-section">
+        <div class="service-section-child">
+          <div class="service-section-child-tab">
+            <button id="Community">Community</button>
+            <button>Courses</button><button>Consultation</button>
+          </div>
+          <div class="service-section-club">
+            <div class="service-section-club-child-left">
+              <h1>The 1% Club</h1>
+              <p>
+                Now, I'm on a mission to help you get to the RICHEST 1% - one
+                educational finance content at a time.
+              </p>
+              <div class="list">
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span>Exclusive 1 on 1 interaction with the creator</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span>
+                    Connect with like minded folks, from diverse backgrounds &
+                    cities
+                  </span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span
+                    >32+ Hours of Investing Tutorials, Tools & Community</span
+                  >
+                </div>
+              </div>
+              <div>
+                <button class="main-btn">Join the community</button>
+              </div>
+            </div>
+            <div class="service-section-club-child-right">
+              <img src="./assets/main.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="service-section-child">
+          <div class="service-section-child-tab">
+            <button>Community</button>
+            <button id="Courses">Courses</button><button>Consultation</button>
+          </div>
+          <div class="service-section-child-bottom">
+            <div class="service-section-child-bottom-main">
+              <div class="service-section-img-box">
+                <img src="./assets/course.png" alt="" />
+              </div>
+              <b>The 1% course</b>
+              <p>
+                Now, I'm on a mission to help you get to the RICHEST 1% - one
+                educational finance content at a time.
+              </p>
+              <div class="btn">
+                <button>Buy the course @ ₹3,999</button>
+              </div>
+            </div>
+            <div class="service-section-child-bottom-main">
+              <div class="service-section-img-box">
+                <img src="./assets/course.png" alt="" />
+              </div>
+              <b>The 1% course</b>
+              <p>
+                Now, I'm on a mission to help you get to the RICHEST 1% - one
+                educational finance content at a time.
+              </p>
+              <div class="btn">
+                <button>Buy the course @ ₹3,999</button>
+              </div>
+            </div>
+            <div class="service-section-child-bottom-main">
+              <div class="service-section-img-box">
+                <img src="./assets/course.png" alt="" />
+              </div>
+              <b>The 1% course</b>
+              <p>
+                Now, I'm on a mission to help you get to the RICHEST 1% - one
+                educational finance content at a time.
+              </p>
+              <div class="btn">
+                <button>Buy the course @ ₹3,999</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service-section-child">
+          <div class="service-section-child-tab">
+            <button>Community</button>
+            <button>Courses</button
+            ><button id="Consultation">Consultation</button>
+          </div>
+          <div class="service-section-child-bottom">
+            <div class="service-section-child-bottom-main">
+              <div class="service-section-img-box">
+                <i class="fa-solid fa-phone" style="color: #1162ee"></i>
+              </div>
+              <b>SCO vs HEA Dream11 Team</b>
+              <b>Prediction | Dream11</b>
+              <div class="slot">
+                <div>
+                  <i><i class="fa-solid fa-wallet"></i></i>
+                  <span>12 Slots left</span>
+                </div>
+                <div>
+                  <i class="fa-regular fa-clock"></i>
+                  <span>15 min</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  <span>99/slot</span>
+                </div>
+              </div>
+              <div class="btn">
+                <button>View Details</button>
+              </div>
+            </div>
+            <div class="service-section-child-bottom-main">
+              <div class="service-section-img-box">
+                <img class="gmeet" src="./assets/gmeet.png" alt="" />
+              </div>
+              <b>SCO vs HEA Dream11 Team</b>
+              <b>Prediction | Dream11</b>
+              <div class="slot">
+                <div>
+                  <i><i class="fa-solid fa-wallet"></i></i>
+                  <span>12 Slots left</span>
+                </div>
+                <div>
+                  <i class="fa-regular fa-clock"></i>
+                  <span>15 min</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  <span>99/slot</span>
+                </div>
+              </div>
+              <div class="btn">
+                <button>View Details</button>
+              </div>
+            </div>
+            <div class="service-section-child-bottom-main">
+              <div class="service-section-img-box">
+                <i class="fa-solid fa-phone" style="color: #1162ee"></i>
+              </div>
+              <b>SCO vs HEA Dream11 Team</b>
+              <b>Prediction | Dream11</b>
+              <div class="slot">
+                <div>
+                  <i><i class="fa-solid fa-wallet"></i></i>
+                  <span>12 Slots left</span>
+                </div>
+                <div>
+                  <i class="fa-regular fa-clock"></i>
+                  <span>15 min</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  <span>99/slot</span>
+                </div>
+              </div>
+              <div class="btn">
+                <button>View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="testimonial">
       <div class="testimonial-top">
         <span>Testimonials</span>
@@ -135,65 +573,65 @@
         <div class="textimonial-card-child">
           <div>
             <p>
-                Now, I'm on a mission to help you get to the RICHEST 1% - one
-                educational finance content at a time. Now, I'm on a mission to help
-                you get to the RICHEST 1% - one educational finance content at a
-                time.
-              </p>
+              Now, I'm on a mission to help you get to the RICHEST 1% - one
+              educational finance content at a time. Now, I'm on a mission to
+              help you get to the RICHEST 1% - one educational finance content
+              at a time.
+            </p>
           </div>
-        <div>
+          <div>
             <img
-            src="https://imgs.search.brave.com/nQ3jCsC_M8nubNN1VOCY6zPKSTF3AF5_8_UyEQTOYok/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jcm9w/LWNpcmNsZS5pbWFn/ZW9ubGluZS5jby9p/bWFnZS5wbmc"
-            alt=""
-            class="testimonial-image"
-          />
-        </div>
+              src="https://imgs.search.brave.com/nQ3jCsC_M8nubNN1VOCY6zPKSTF3AF5_8_UyEQTOYok/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jcm9w/LWNpcmNsZS5pbWFn/ZW9ubGluZS5jby9p/bWFnZS5wbmc"
+              alt=""
+              class="testimonial-image"
+            />
+          </div>
           <div>
             <b>Rustom Paji</b>
-          <p>Hotel owner</p>
+            <p>Hotel owner</p>
           </div>
         </div>
         <div class="textimonial-card-child">
           <div>
             <p>
-                Now, I'm on a mission to help you get to the RICHEST 1% - one
-                educational finance content at a time. Now, I'm on a mission to help
-                you get to the RICHEST 1% - one educational finance content at a
-                time.
-              </p>
+              Now, I'm on a mission to help you get to the RICHEST 1% - one
+              educational finance content at a time. Now, I'm on a mission to
+              help you get to the RICHEST 1% - one educational finance content
+              at a time.
+            </p>
           </div>
           <div>
             <img
-            src="https://imgs.search.brave.com/nQ3jCsC_M8nubNN1VOCY6zPKSTF3AF5_8_UyEQTOYok/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jcm9w/LWNpcmNsZS5pbWFn/ZW9ubGluZS5jby9p/bWFnZS5wbmc"
-            alt=""
-            class="testimonial-image"
-          />
+              src="https://imgs.search.brave.com/nQ3jCsC_M8nubNN1VOCY6zPKSTF3AF5_8_UyEQTOYok/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jcm9w/LWNpcmNsZS5pbWFn/ZW9ubGluZS5jby9p/bWFnZS5wbmc"
+              alt=""
+              class="testimonial-image"
+            />
           </div>
-        <div>
+          <div>
             <p>Rustom Paji</p>
             <b>Hotel owner</b>
-        </div>
+          </div>
         </div>
         <div class="textimonial-card-child">
-        <div>
+          <div>
             <p>
-                Now, I'm on a mission to help you get to the RICHEST 1% - one
-                educational finance content at a time. Now, I'm on a mission to help
-                you get to the RICHEST 1% - one educational finance content at a
-                time.
-              </p>
-        </div>
-         <div>
+              Now, I'm on a mission to help you get to the RICHEST 1% - one
+              educational finance content at a time. Now, I'm on a mission to
+              help you get to the RICHEST 1% - one educational finance content
+              at a time.
+            </p>
+          </div>
+          <div>
             <img
-            src="https://imgs.search.brave.com/nQ3jCsC_M8nubNN1VOCY6zPKSTF3AF5_8_UyEQTOYok/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jcm9w/LWNpcmNsZS5pbWFn/ZW9ubGluZS5jby9p/bWFnZS5wbmc"
-            alt=""
-            class="testimonial-image"
-          />
-         </div>
-        <div>
+              src="https://imgs.search.brave.com/nQ3jCsC_M8nubNN1VOCY6zPKSTF3AF5_8_UyEQTOYok/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jcm9w/LWNpcmNsZS5pbWFn/ZW9ubGluZS5jby9p/bWFnZS5wbmc"
+              alt=""
+              class="testimonial-image"
+            />
+          </div>
+          <div>
             <p>Rustom Paji</p>
             <b>Hotel owner</b>
-        </div>
+          </div>
         </div>
       </div>
     </div>
