@@ -7,539 +7,8 @@
       rel="stylesheet"
       href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      :root {
-        --bg1: #5c7ff6;
-        --bg2: #335ff4;
-        --bg3: #ebeffe;
-      }
-      .navbar {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 10px 20px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-      }
-
-      .logo {
-        color: var(--bg1);
-        font-weight: bold;
-      }
-
-      .menu-icon {
-        display: none;
-        cursor: pointer;
-        font-size: 24px;
-      }
-
-      .menu {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-      }
-
-      .menu li {
-        margin-right: 20px;
-      }
-
-      .menu a {
-        text-decoration: none;
-        color: black;
-      }
-      #about-me {
-        width: 60%;
-        margin: auto;
-        display: grid;
-        gap: 30px;
-        margin-bottom: 50px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      }
-      .about-me-image-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-      }
-      .about-me-image-box img {
-        border-radius: 50%;
-        width: 40%;
-        border: 10px solid rgb(111, 111, 255);
-      }
-      .about-content {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-      .ico {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-      }
-      .ico i {
-        color: white;
-        padding: 7px;
-        background: var(--bg2);
-        border-radius: 50%;
-        font-size: 25px;
-      }
-      #featured {
-        width: 60%;
-        margin: 50px auto;
-      }
-      .featured-font {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        font-size: 35px;
-        justify-content: center;
-        color: var(--bg2);
-      }
-      .featured-font span:nth-child(2) {
-        color: var(--bg2);
-        font-family: "Times New Roman", Times, serif;
-      }
-      .featured-font span:nth-child(4) {
-        color: var(--bg2);
-        font-family: "Times New Roman", Times, serif;
-      }
-      .featured-font span:nth-child(3) {
-        color: var(--bg2);
-        font-weight: bolder;
-      }
-      .featured-font span:nth-child(5) {
-        color: var(--bg2);
-        font-weight: bolder;
-      }
-      .featured-font span:nth-child(1) {
-        color: var(--bg2);
-        font-weight: bolder;
-      }
-
-      .featured-top {
-        display: grid;
-        gap: 10px;
-        text-align: center;
-      }
-
-      #footer {
-        background: var(--bg2);
-        color: white;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-        padding: 10px 0;
-        margin-top: 50px;
-      }
-
-      #foot {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-      }
-      .store {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .social {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        align-items: center;
-      }
-      .social i {
-        /* color:var(--bg2); */
-        font-size: 30px;
-        /* background: white; */
-        border-radius: 50% !important;
-      }
-      .contact {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
-      }
-      .contact-bottom {
-        display: flex;
-        gap: 40px;
-        justify-content: space-evenly;
-      }
-      .contact-bottom-child {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        /* border: 1px solid; */
-        padding: 10px;
-      }
-      .contact-content span:nth-child(1) {
-        color: darkgray;
-      }
-      .contact-content span:nth-child(2) {
-        font-weight: 600;
-      }
-      .contact-ico i {
-        font-size: 30px;
-        color: var(--bg2);
-        background: rgb(237, 235, 235);
-        padding: 8px;
-        border-radius: 50%;
-      }
-      .contact-content {
-        display: flex;
-        flex-direction: column;
-        line-height: normal;
-        gap: 5px;
-      }
-      .contact-top {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      #testimonial {
-        /* width: 80%; */
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 35px;
-        margin-bottom: 50px;
-      }
-      .testimonial-card {
-        display: grid;
-        grid-template-columns: 20% 20% 20%;
-        gap: 15px;
-        justify-content: center;
-        text-align: center;
-      }
-      .testimonial-top {
-        text-align: center;
-      }
-      .textimonial-card-child {
-        padding: 15px 10px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        border-radius: 16px;
-        display: grid;
-        gap: 15px;
-        align-items: center;
-      }
-      .testimonial-image {
-        width: 60px;
-        border-radius: 50%;
-      }
-      #services {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 50px;
-        gap: 35px;
-      }
-      .services-top {
-        text-align: center;
-      }
-      .service-section {
-        display: grid;
-        gap: 45px;
-      }
-      .service-section-child-consultation,
-      .service-section-child-courses {
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-        gap: 35px;
-      }
-
-      .service-section-child-tab {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-      }
-      .service-section-child-tab button {
-        padding: 5px 20px;
-        border-radius: 9999px;
-        border: 1px solid rgb(224, 224, 224);
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        background: white;
-        font-weight: 400;
-        cursor: pointer;
-      }
-      .service-section-child-bottom {
-        display: grid;
-        grid-template-columns: 20% 20% 20%;
-        justify-content: center;
-        gap: 15px;
-      }
-      .service-section-child-bottom-main {
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        padding: 10px;
-        border-radius: 16px;
-        display: grid;
-        gap: 15px;
-      }
-      .service-section-child-bottom-main button {
-        padding: 10px 20px;
-        width: 100%;
-        border-radius: 9999px;
-        color: white;
-        background: var(--bg2);
-        border: none;
-      }
-      .service-section-img-box {
-      }
-      .service-section-img-box img {
-        width: 100%;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-        padding: 5px;
-      }
-      .service-section-img-box i {
-        padding: 10px;
-        background: rgb(237, 237, 237);
-        border-radius: 50%;
-        font-size: 15px;
-        object-fit: contain;
-      }
-      .slot {
-        display: flex;
-        gap: 10px;
-        justify-content: space-between;
-      }
-      .gmeet {
-        width: 20px !important;
-        padding: 10px !important;
-        background: rgb(237, 237, 237);
-        border-radius: 50% !important;
-      }
-      #Consultation,
-      #Courses,
-      #Community {
-        background: var(--bg2);
-        color: white;
-        cursor: pointer;
-      }
-      .list {
-        display: grid;
-        gap: 10px;
-      }
-      .list > div {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .list i {
-        background: black;
-        color: white;
-        padding: 5px;
-        border-radius: 50%;
-      }
-      .service-section-club {
-        display: grid;
-        grid-template-columns: 28% 28%;
-        gap: 15px;
-        justify-content: center;
-      }
-      .service-section-club-child-left {
-        display: grid;
-        gap: 15px;
-      }
-      .service-section-club-child-right {
-        /* background:#0575E6; */
-        border-radius: 16px;
-        display: flex;
-        justify-content: right;
-      }
-      .service-section-club-child-right img {
-        background-image: linear-gradient(
-          to right,
-          #0839ea 0%,
-          #0575e6 51%,
-          #2f7ac4 100%
-        );
-        border-radius: 16px;
-        width: 80%;
-        height: 100%;
-      }
-
-      .main-btn {
-        padding: 10px 20px;
-        width: 50%;
-        border-radius: 9999px;
-        color: white;
-        background: var(--bg2);
-        border: none;
-        margin-top: 20px;
-        cursor: pointer;
-      }
-      #media_section {
-        display: grid;
-        gap: 35px;
-        justify-content: center;
-        text-align: center;
-        margin-bottom: 50px;
-      }
-      .media_section_main {
-        position: relative;
-      }
-      .media_section_main i {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        color: white;
-        font-size: 50px;
-        transform: translate(-50%, -50%);
-        margin: 0;
-      }
-      .media_section-img {
-        width: 100%;
-        border-radius: 16px;
-      }
-      #viewsection {
-        text-align: center;
-        color: white;
-        margin-bottom: 50px;
-      }
-      .view_main-child-second {
-        display: flex;
-        gap: 15px;
-        justify-content: center;
-      }
-      .view_main-child {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-      }
-
-      .view_main-child-second img {
-        width: 200px;
-        object-fit: contain;
-      }
-      .view_main {
-        display: grid;
-        gap: 20px;
-        padding: 50px;
-        justify-content: center;
-        background: var(--bg2);
-        border-top-right-radius: 50%;
-        border-top-left-radius: 50%;
-      }
-      .viewsection-btn,
-      .banner-btn {
-        padding: 10px 50px;
-        width: max-content;
-        border-radius: 9999px;
-        color: var(--bg2);
-        background: var(--bg3);
-        border: none;
-        cursor: pointer;
-      }
-      #banner {
-        display: grid;
-        grid-template-columns: 25% 25%;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
-        background: var(--bg2);
-        color: white;
-      }
-      .banner-image img {
-        width: 100%;
-      }
-      .banner-child {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        /* justify-content: center; */
-        align-items: center;
-      }
-      @media (max-width: 768px) {
-        .menu {
-          display: none;
-          flex-direction: column;
-          position: absolute;
-          top: 60px;
-          right: 0;
-          background-color: #333;
-          z-index: 1;
-          width: 200px;
-          padding: 10px;
-          transform: translateX(100%);
-          transition: transform 0.3s ease-in;
-        }
-
-        .menu.active {
-          transform: translateX(0);
-        }
-
-        .menu-icon {
-          display: block;
-        }
-        .contact{
-          /* display: none; */
-        }
-        .contact-bottom{
-          flex-direction: column;
-        }
-        .contact-top{
-          padding: 0 20px;
-          text-align: center;
-        }
-        .service-section-child-bottom{
-          grid-template-columns: 100%;
-          padding: 0 15px;
-        }
-        .testimonial-card {
-          grid-template-columns: 100%;
-          padding: 0 15px;
-        }
-        #media_section {
-          padding: 0 15px;
-        }
-        #banner{
-
-          grid-template-columns: 100%;
-        }
-        #services{
-          padding: 0 15px;
-        }
-        .service-section-club {
-          grid-template-columns: 100%;
-
-        }
-        .service-section-club-child-right{
-          justify-content: center;
-        }
-        .main-btn {
-          display: none;
-        }
-        #foot{
-          flex-wrap: wrap;
-        }
-        .view_main-child-second img {
-          width: 120px;
-        }
-        #about-me {
-          width: 100%;
-        }
-        .about-content {
-          padding: 0 15px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <title>Rigi</title>
   </head>
   <body>
     <nav class="navbar">
@@ -563,8 +32,9 @@
         <button class="banner-btn">Join the community</button>
       </div>
       <div class="banner-image">
-        <img src="./assets/banner.webp" alt="" />
+        <img src="./assets/banner.png" alt="" />
       </div>
+      <button class="banner-btn2">Join the community</button>
     </div>
 
     <div id="featured">
@@ -573,11 +43,10 @@
           <span>Featured in</span>
         </div>
         <div class="featured-font">
-          <span>Forbes</span>
-          <span>THE ECONOMIC TIMES</span>
           <span>mint</span>
           <span>THE TIMES OF INDIA</span>
           <span>Forbes</span>
+          <span>THE ECONOMIC TIMES</span>
         </div>
       </div>
     </div>
@@ -604,12 +73,12 @@
         action oriented posts on LinkedIn and Twitter for those who are not on
         social media platforms and prefer to read it instead.
       </div>
-      <div class="ico">
+      <div class="social1">
         <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-whatsapp"></i>
-        <i class="fa-brands fa-square-youtube"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
       </div>
     </div>
 
@@ -622,8 +91,9 @@
       <div class="service-section">
         <div class="service-section-child">
           <div class="service-section-child-tab">
-            <button id="Community">Community</button>
-            <button id="Courses">Courses</button><button id="Consultation">Consultation</button>
+            <button id="Community" class="active">Community</button>
+            <button id="Courses">Courses</button
+            ><button id="Consultation">Consultation</button>
           </div>
         </div>
         <div class="service-section-club">
@@ -655,7 +125,7 @@
             </div>
           </div>
           <div class="service-section-club-child-right">
-            <img src="./assets/main.png" alt="" />
+            <img src="./assets/pic3.png" alt="" />
           </div>
         </div>
         <div class="service-section-child-courses">
@@ -824,8 +294,8 @@
             />
           </div>
           <div>
-            <p>Rustom Paji</p>
-            <b>Hotel owner</b>
+            <b>Rustom Paji</b>
+            <p>Hotel owner</p>
           </div>
         </div>
         <div class="textimonial-card-child">
@@ -845,8 +315,8 @@
             />
           </div>
           <div>
-            <p>Rustom Paji</p>
-            <b>Hotel owner</b>
+            <b>Rustom Paji</b>
+            <p>Hotel owner</p>
           </div>
         </div>
       </div>
@@ -875,6 +345,7 @@
           <img src="./assets/desk1.png" alt="" />
           <img src="./assets/desk2.png" alt="" />
         </div>
+        <button class="viewsection-btn2">Join the community</button>
       </div>
     </div>
     <div class="contact">
@@ -919,10 +390,10 @@
       </div>
       <div class="social">
         <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-square-twitter"></i>
-        <i class="fa-brands fa-square-youtube"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
       </div>
       <div class="store">
         <img width="150px" src="./assets/appstore.png" alt="" />
@@ -935,3 +406,4 @@
     </div>
   </body>
 </html>
+<script src="index.js"></script>
