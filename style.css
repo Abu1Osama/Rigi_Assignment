@@ -13,17 +13,27 @@
 body {
   background: var(--bg3);
 }
+html {
+  scroll-behavior: smooth;
+}
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 10px 20px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg3);
+  z-index: 9999;
+  box-sizing: border-box;
 }
 
-.logo {
+.logo a {
   color: var(--bg1);
   font-weight: bold;
+  text-decoration: none;
 }
 
 .menu-icon {
@@ -40,12 +50,16 @@ body {
 }
 
 .menu li {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .menu a {
   text-decoration: none;
   color: black;
+}
+
+.closeico {
+  display: none;
 }
 #about-me {
   width: 60%;
@@ -510,6 +524,7 @@ body {
   background: var(--bg2);
   color: white;
   min-height: 540px;
+  margin-top: 43px;
 }
 .banner-image {
   background: linear-gradient(45deg, var(--bg1), var(--bg3), var(--bg2));
@@ -555,23 +570,48 @@ body {
   .navbar {
     justify-content: space-between;
   }
+
   .menu {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
+    position: fixed;
+    top: 0px;
     right: 0;
-    background-color: #333;
+    background-color: var(--bg2);
     z-index: 1;
     width: 200px;
     padding: 10px;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
+    height: 100vh;
   }
 
-  .menu.active {
+  .menu.activeee {
     transform: translateX(0);
   }
+  .menu li {
+    color: white;
+    margin-top: 15px;
+    padding: 15px;
+  }
+  .menu li a {
+    color: white;
+  }
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-icon i {
+    color: var(--bg2);
+  }
+
+  .closeico {
+    display: block;
+  }
+  .closeico i {
+    color: var(--bg3);
+  }
+
   .viewsection-btn2 {
     display: block;
     padding: 10px 50px;
@@ -585,12 +625,6 @@ body {
     display: none;
   }
 
-  .menu-icon {
-    display: block;
-  }
-  .menu-icon i {
-    color: var(--bg2);
-  }
   .banner-child {
     margin-bottom: 70px;
     padding: 20px 0;

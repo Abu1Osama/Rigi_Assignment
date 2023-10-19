@@ -30,3 +30,23 @@ consultationbutton.addEventListener("click", function () {
   communitybutton.classList.remove("active");
   coursesbutton.classList.remove("active");
 });
+
+const menuIcon = document.getElementById("menu-icon");
+const closeIcon = document.getElementById("close-icon");
+const menu = document.getElementById("menu");
+
+menuIcon.addEventListener("click", function () {
+  menu.classList.add("activeee");
+  menu.style.display = "flex";
+});
+
+closeIcon.addEventListener("click", function () {
+  menu.classList.remove("activeee");
+});
+
+const menu_link = document.querySelectorAll(".hide");
+for (let i = 0; i < menu_link.length; i++) {
+  menu_link[i].addEventListener("click", function () {
+    menu.classList.remove("activeee");
+  });
+}

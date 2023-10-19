@@ -12,13 +12,17 @@
   </head>
   <body>
     <nav class="navbar">
-      <div class="logo">Logo</div>
-      <div class="menu-icon" onclick="toggleMenu()">
-        <i class="fa-solid fa-bars"></i>
+      <div class="logo"><a href="#banner">Logo</a></div>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
       </div>
-      <ul class="menu">
-        <li><a href="#">Join community</a></li>
-        <li><a href="#">Contact us</a></li>
+
+      <ul class="menu" id="menu">
+        <div class="closeico">
+          <i class="fa-solid fa-xmark" id="close-icon"></i>
+        </div>
+        <li><a class="hide" href="#services">Join community</a></li>
+        <li><a class="hide" href="#Contact">Contact us</a></li>
       </ul>
     </nav>
 
@@ -266,11 +270,7 @@
             </p>
           </div>
           <div>
-            <img
-              src="https://imgs.search.brave.com/nQ3jCsC_M8nubNN1VOCY6zPKSTF3AF5_8_UyEQTOYok/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jcm9w/LWNpcmNsZS5pbWFn/ZW9ubGluZS5jby9p/bWFnZS5wbmc"
-              alt=""
-              class="testimonial-image"
-            />
+            <img src="./assets/user.jpg" alt="" class="testimonial-image" />
           </div>
           <div>
             <b>Rustom Paji</b>
@@ -287,11 +287,7 @@
             </p>
           </div>
           <div>
-            <img
-              src="https://imgs.search.brave.com/nQ3jCsC_M8nubNN1VOCY6zPKSTF3AF5_8_UyEQTOYok/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jcm9w/LWNpcmNsZS5pbWFn/ZW9ubGluZS5jby9p/bWFnZS5wbmc"
-              alt=""
-              class="testimonial-image"
-            />
+            <img src="./assets/user.jpg" alt="" class="testimonial-image" />
           </div>
           <div>
             <b>Rustom Paji</b>
@@ -308,11 +304,7 @@
             </p>
           </div>
           <div>
-            <img
-              src="https://imgs.search.brave.com/nQ3jCsC_M8nubNN1VOCY6zPKSTF3AF5_8_UyEQTOYok/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jcm9w/LWNpcmNsZS5pbWFn/ZW9ubGluZS5jby9p/bWFnZS5wbmc"
-              alt=""
-              class="testimonial-image"
-            />
+            <img src="./assets/user.jpg" alt="" class="testimonial-image" />
           </div>
           <div>
             <b>Rustom Paji</b>
@@ -348,7 +340,7 @@
         <button class="viewsection-btn2">Join the community</button>
       </div>
     </div>
-    <div class="contact">
+    <div class="contact" id="Contact">
       <div class="contact-top">
         <span>Contact us</span>
         <h2>Do you have any queries, feel free to reach out to us</h2>
