@@ -44,6 +44,7 @@ closeIcon.addEventListener("click", function () {
   menu.classList.remove("activeee");
 });
 
+
 const menu_link = document.querySelectorAll(".hide");
 for (let i = 0; i < menu_link.length; i++) {
   menu_link[i].addEventListener("click", function () {
